@@ -1,0 +1,104 @@
+<!-- Hero Section -->
+<section class="hero-section py-5" style="background-color: #121212; color: white;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="display-4 fw-bold mb-3">{{categoryName}}</h1>
+          <p class="lead text-light mx-auto" style="max-width: 700px;">{{categoryDescription}}</p>
+          <div class="divider mx-auto mt-4 bg-light" style="width: 80px; height: 3px; opacity: 0.3;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Posts Section -->
+  <section class="blog-section py-5">
+    <div class="container">
+      <!-- Loading State -->
+      <div *ngIf="loading" class="text-center py-5">
+        <div class="spinner-border text-primary mb-3" role="status"></div>
+        <p>Loading posts...</p>
+      </div>
+      
+      <!-- No Posts State -->
+      <div *ngIf="!loading && posts.length === 0" class="card shadow-sm p-5 text-center mx-auto" style="max-width: 500px;">
+        <div class="display-3 mb-3">📝</div>
+        <h3 class="h4 mb-3">No Posts Found</h3>
+        <p class="text-muted mb-4">We couldn't find any articles in this category.</p>
+        <a routerLink="/blogs" class="btn btn-primary d-flex align-items-center gap-2 mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+          Back to All Posts
+        </a>
+      </div>
+      
+      <!-- Blog Posts Grid -->
+      <div *ngIf="!loading && posts.length > 0">
+        <!-- Blog Cards -->
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4" *ngFor="let post of posts">
+            <div class="card h-100 shadow-sm hover-card">
+              <!-- Featured Image -->
+              <div class="card-img-top position-relative overflow-hidden" style="height: 200px;">
+                <div [innerHTML]="extractFeaturedImage(post.content.rendered)" class="blog-image-wrapper"></div>
+                <div class="gradient-overlay"></div>
+                <div class="position-absolute bottom-0 end-0 p-2">
+                  <span class="badge bg-dark text-white">{{ formatDate(post.date) }}</span> &nbsp;
+                  <span class="badge bg-dark reading-time">{{ getReadingTime(post.content.rendered) }}</span>
+                </div>
+              </div>
+              
+              <div class="card-body d-flex flex-column">
+                <!-- Categories -->
+                <div class="d-flex flex-wrap gap-2 mb-2">
+                  <span *ngFor="let categoryId of post.categories" class="badge bg-primary-subtle text-primary">
+                    {{ getCategoryName(categoryId) }}
+                  </span>
+                </div>
+                
+                <!-- Title -->
+                <h2 class="card-title h5 fw-bold mb-3" [innerHTML]="post.title.rendered"></h2>
+                
+                <!-- Excerpt -->
+                <div class="card-text text-secondary mb-4 flex-grow-1">
+                  <p>{{ (post.excerpt.rendered) | slice:0:120 }}{{ (post.excerpt.rendered).length > 120 ? '...' : '' }}</p>
+                </div>
+                
+                <!-- Card Footer -->
+                <div class="pt-3 border-top">
+                  <a [routerLink]="['/post', post.id]" class="btn btn-outline-dark d-flex align-items-center justify-content-center gap-2">
+                    Read Article
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pagination -->
+        <nav aria-label="Blog pagination" *ngIf="totalPages > 1" class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [class.disabled]="currentPage <= 1">
+              <button class="page-link" (click)="prevPage()" [disabled]="currentPage <= 1">
+                <span aria-hidden="true">&laquo;</span> Previous
+              </button>
+            </li>
+            <li class="page-item disabled">
+              <span class="page-link">Page {{ currentPage }} of {{ totalPages }}</span>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage >= totalPages">
+              <button class="page-link" (click)="nextPage()" [disabled]="currentPage >= totalPages">
+                Next <span aria-hidden="true">&raquo;</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <app-category-section></app-category-section>

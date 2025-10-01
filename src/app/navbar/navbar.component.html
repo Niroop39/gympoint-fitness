@@ -1,0 +1,180 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary sticky-top" [class.navbar-scrolled]="isScrolled">
+  <div class="container-fluid">
+    <!-- Toggler and Logo on the left side -->
+    <div class="d-flex align-items-center">
+      <button class="navbar-toggler me-2 small-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        <!-- Custom hamburger icon instead of default -->
+        <div class="custom-hamburger" [class.open]="!isMenuCollapsed">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active">
+        <img src="gympoint_logo.png" alt="Logo" style="height: 50px;">
+      </a>
+    </div>
+
+    <!-- Collapsible content -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" id="programsDropdown" ngbDropdownToggle>
+            Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown" ngbDropdownMenu>
+            <a class="dropdown-item" [routerLink]="['/programs/1-1-offline-coaching']" (click)="isMenuCollapsed = true">1-1 Offline Coaching</a>
+            <a class="dropdown-item" [routerLink]="['/programs/online-coaching']" (click)="isMenuCollapsed = true">Online Coaching</a>
+            <a class="dropdown-item" [routerLink]="['/programs/nutrition-consulting']" (click)="isMenuCollapsed = true">Nutrition Consulting</a>
+            <a class="dropdown-item" [routerLink]="['/programs/corporate-wellness-programs']" (click)="isMenuCollapsed = true">Corporate Wellness Programs</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/about-us']" (click)="isMenuCollapsed = true">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/blogs']" (click)="isMenuCollapsed = true">Blog</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Button on the right-most side with adjusted size for mobile -->
+    <div class="ms-auto ms-lg-2">
+      <button [routerLink]="['/contact-us']" class="btn btn-dark btn-sm-mobile">Transform Now</button>
+    </div>
+  </div>
+</nav>
+
+<style>
+
+  /* Add these new styles for the custom hamburger menu */
+  .custom-hamburger {
+    width: 20px;
+    height: 16px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .custom-hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #333;
+    border-radius: 3px;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  /* Animation for when menu is open */
+  .custom-hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  
+  .custom-hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .custom-hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Adjust the button that contains the hamburger */
+  .navbar-toggler {
+    border: none;
+    padding: 8px 12px;
+    background-color: transparent;
+    width: auto;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  .navbar {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    z-index: 1030; /* Ensure it stays above other elements */
+  }
+
+  .navbar-scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow at the bottom */
+  }
+  
+  .nav-link {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    color: #333;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: #0d6efd;
+  }
+  
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  .btn-dark {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+  }
+  
+  .dropdown-item {
+    padding: 8px 20px;
+    font-weight: 500;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      padding: 20px 0;
+    }
+    
+    .navbar-nav {
+      align-items: flex-start;
+    }
+    
+    .nav-item {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    
+    /* Smaller button on mobile */
+    .btn-sm-mobile {
+      padding: 6px 12px;
+      font-size: 0.875rem;
+    }
+    
+    /* Smaller toggler button */
+    .small-toggler {
+      padding: 0.2rem 0.5rem;
+    }
+    
+    /* Adjust container padding */
+    .container-fluid {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+</style>

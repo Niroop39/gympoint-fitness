@@ -1,0 +1,72 @@
+/* Custom styling to complement Bootstrap */
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+.blog-section {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  /* Custom divider */
+  .divider {
+    height: 4px;
+    width: 70px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    border-radius: 2px;
+  }
+  
+  /* Card hover effect */
+  .hover-card {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Gradient overlay for blog images */
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  }
+  
+  /* Fix for WordPress content styling */
+  .blog-image-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .blog-image-wrapper figure {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .blog-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .hover-card:hover .blog-image-wrapper img {
+    transform: scale(1.05);
+  }
+  
+  /* Spinner styling */
+  @keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    animation: pulse 1.5s infinite ease-in-out;
+  }

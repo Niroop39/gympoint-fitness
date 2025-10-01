@@ -1,0 +1,93 @@
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+/* Section Styles */
+.category-section {
+    background-color: #121212;
+    position: relative;
+    margin: 60px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 900px;
+}
+
+/* Background Effect */
+.category-section::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -75px;
+    right: -75px;
+    filter: blur(20px);
+}
+
+.category-section::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    bottom: -100px;
+    left: -100px;
+    filter: blur(30px);
+}
+
+/* Glassmorphic Container */
+.glassmorphic-container {
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 40px 30px;
+    position: relative;
+    z-index: 10;
+    max-width: 800px !important;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.glassmorphic-card {
+    background: rgba(40, 40, 40, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glassmorphic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(50, 50, 50, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Typography */
+.category-section h2 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.category-section p {
+    opacity: 0.85;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .glassmorphic-container {
+        padding: 30px 20px;
+    }
+    
+    .category-section {
+        padding: 60px 0;
+        margin: 40px auto;
+    }
+}

@@ -1,0 +1,112 @@
+<section class="section py-5">
+    <div class="container">
+        <div class="row text-center mb-4">
+            <h2 class="display-5 fw-bold">Our Trainings</h2>
+            <p class="mx-auto text-center text-muted" style="max-width: 500px;">Tailored Workouts, Expert guidance and Comprehensive Programs to Meet All Your Fitness Needs</p>
+        </div>
+        
+        <!-- Scrollable Cards (applies to all screen sizes) -->
+        <div class="scroll-container">
+            <!-- Card 1 (Light) -->
+            <div class="scroll-card">
+                <div class="card shadow-sm card-light h-100">
+                    <div class="card-img-container" style="height: 200px; overflow: hidden; padding: 10px;">
+                        <img src="program1.jpeg" class="card-img-top rounded" alt="Personal Training" style="object-fit: cover; height: 100%; width: 100%;">
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold">Online Coaching</h5>
+                        <p class="card-text flex-grow-1">Your Path to Fitness Success In fast-paced world.</p>
+                        <div class="text-center">
+                            <a [routerLink]="['/programs/online-coaching']" class="btn btn-dark mt-2">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 (Dark) -->
+            <div class="scroll-card">
+                <div class="card shadow-sm card-dark h-100">
+                    <div class="card-img-container-dark" style="height: 200px; overflow: hidden; padding: 10px;">
+                        <img src="program2.png" class="card-img-top rounded" alt="Group Fitness" style="object-fit: cover; height: 100%; width: 100%;">
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-white">1-1 Offline Coaching</h5>
+                        <p class="card-text flex-grow-1 text-white">Elevate Your Fitness with Personalized Coaching.</p>
+                        <div class="text-center">
+                            <a [routerLink]="['/programs/1-1-offline-coaching']" class="btn btn-light mt-2">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 (Light) -->
+            <div class="scroll-card">
+                <div class="card shadow-sm card-light h-100">
+                    <div class="card-img-container" style="height: 200px; overflow: hidden; padding: 10px;">
+                        <img src="program3.png" class="card-img-top rounded" alt="Nutrition Coaching" style="object-fit: cover; height: 100%; width: 100%;">
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold">Nutrition Consulting</h5>
+                        <p class="card-text flex-grow-1">Fuel Your Body, Transform Your Health.</p>
+                        <div class="text-center">
+                            <a [routerLink]="['/programs/nutrition-consulting']" class="btn btn-dark mt-2">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 (Dark) -->
+            <div class="scroll-card">
+                <div class="card shadow-sm card-dark h-100">
+                    <div class="card-img-container-dark" style="height: 200px; overflow: hidden; padding: 10px;">
+                        <img src="program4.png" class="card-img-top rounded" alt="Corporate Wellness Programs" style="object-fit: cover; height: 100%; width: 100%;">
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-white">Corporate Wellness Programs</h5>
+                        <p class="card-text flex-grow-1 text-white">Empowering teams with health and wellness solutions.</p>
+                        <div class="text-center">
+                            <a [routerLink]="['/programs/corporate-wellness-programs']" class="btn btn-light mt-2">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Scrollable container styles */
+    .scroll-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px; /* Add spacing between cards */
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+
+    .scroll-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        width: 300px; /* Set a fixed width for cards */
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .card-light {
+        background-color: #f8f9fa;
+        color: black;
+    }
+</style>

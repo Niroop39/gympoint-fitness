@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+.blog-image-wrapper figure img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing */
+    margin: 0 auto; /* Center the image */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .blog-image-wrapper figure img {
+      width: 100%; /* Take up the full width of the container */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
+
+ .post-body img {
+    max-width: 100%;
+    /* Make sure images don't exceed their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    display: block;
+    /* Remove any extra spacing */
+    margin: 0 auto;
+    /* Center the image */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .post-body img {
+        width: 100%;
+        /* Take up the full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}
+
+/* Default styling for images within figure elements inside .post-body */
+.post-body figure img {
+    max-width: 100%;
+    /* Make sure images don't exceed their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    display: block;
+    /* Remove any extra spacing */
+    margin: 0 auto;
+    /* Center the image */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .post-body figure img {
+        width: 100%;
+        /* Take up the full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}
+
+/* Default styling for images within figure elements inside .post-body */
+.post-body figure video {
+    max-width: 100%;
+    /* Make sure images don't exceed their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    display: block;
+    /* Remove any extra spacing */
+    margin: 0 auto;
+    /* Center the image */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .post-body figure video {
+        width: 100%;
+        /* Take up the full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}
+
+/* Default styling for images within figure elements inside .post-body */
+.post-body figure iframe {
+    max-width: 100%;
+    /* Make sure images don't exceed their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    display: block;
+    /* Remove any extra spacing */
+    margin: 0 auto;
+    /* Center the image */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .post-body figure iframe {
+        width: 100%;
+        /* Take up the full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}
+

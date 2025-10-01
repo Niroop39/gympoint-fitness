@@ -1,0 +1,186 @@
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <!-- Left side: Three images with stacked layout -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="about-images">
+          <!-- Desktop Layout -->
+          <div class="d-none d-md-block">
+            <div class="row g-4">
+              <div class="col-5">
+                <!-- Stacked images on the left as a column -->
+                <div class="row g-4">
+                  <div class="col-12">
+                    <div class="image-container">
+                      <img src="about2.png" alt="About BWR Fitness 2" class="img-fluid rounded shadow">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="image-container">
+                      <img src="about3.png" alt="About BWR Fitness 3" class="img-fluid rounded shadow">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-7">
+                <!-- Main image on the right as a tall rectangle -->
+                <div class="image-container main-image h-100">
+                  <img src="about1.png" alt="About BWR Fitness 1" class="img-fluid rounded shadow h-100 w-100 object-fit-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Layout - Grid of 3 equally sized images -->
+          <div class="d-md-none">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="image-container mb-3">
+                  <img src="about1.png" alt="About BWR Fitness 1" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="image-container">
+                  <img src="about3.png" alt="About BWR Fitness 3" class="img-fluid rounded shadow-sm">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="image-container h-100">
+                  <img src="about2.png" alt="About BWR Fitness 2" class="img-fluid rounded shadow-sm h-100 w-100 object-fit-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side content -->
+      <div class="col-lg-6">
+        <div class="about-content">
+          <h2 class="fw-bold mb-4">About GymPoint Fitness Studio</h2>
+
+          <p class="mb-4">GymPoint Fitness Studio is Hyderabad’s premier destination for fitness, strength, and transformation. Our state-of-the-art facilities feature the latest equipment, dedicated functional training zones, and a motivating environment for all fitness levels. With 50+ certified trainers, we offer personalized coaching, group classes, and specialized programs for weight loss, muscle gain, and injury rehabilitation. Since 2018, we’ve helped over 3,000 members achieve their goals through expert guidance, science-backed nutrition, and a supportive community. Whether you’re a beginner or an athlete, GymPoint is committed to your progress, safety, and long-term results.</p>
+
+          <div class="achievements row g-3 mb-4">
+            <div class="col-md-6 col-lg-6 d-flex">
+              <div class="achievement-box text-center p-3 rounded w-100">
+                <i class="fas fa-users fa-2x mb-2 text-dark"></i>
+                <h4 class="achievement-number mt-1">100k+</h4>
+                <p class="achievement-text">Members Transformed</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 d-flex">
+              <div class="achievement-box text-center p-3 rounded w-100">
+                <i class="fas fa-dumbbell fa-2x mb-2 text-dark"></i>
+                <h4 class="achievement-number mt-1">50+ Trainers</h4>
+                <p class="achievement-text">Certified & Experienced</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 d-flex">
+              <div class="achievement-box text-center p-3 rounded w-100">
+                <i class="fas fa-globe fa-2x mb-2 text-dark"></i>
+                <h4 class="achievement-number mt-1">6 Branches</h4>
+                <p class="achievement-text">Across Hyderabad</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 d-flex">
+              <div class="achievement-box text-center p-3 rounded w-100">
+                <i class="fas fa-utensils fa-2x mb-2 text-dark"></i>
+                <h4 class="achievement-number mt-1">Personalized</h4>
+                <p class="achievement-text">Training & Nutrition Plans</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center w-100 mt-4">
+            <a routerLinkActive="active" [routerLink]="['/about-us']" class="btn btn-explore mt-4">Explore More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .image-container {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .image-container img {
+    transition: transform 0.5s ease;
+    border-radius: 12px;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.03);
+  }
+
+  .object-fit-cover {
+    object-fit: cover;
+  }
+
+  .achievement-box {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .achievement-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .achievement-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .achievement-text {
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .btn-explore {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid #000;
+  }
+
+  .btn-explore:hover {
+          background-color: white;
+          color: #000;
+          border: 2px solid #000;
+      }
+    
+    /* Mobile optimizations */
+    @media (max-width: 767px) {
+      .about-section {
+        padding: 40px 0;
+      }
+      
+      .image-container {
+        margin-bottom: 0;
+      }
+      
+      .col-6 .image-container.h-100 {
+        height: calc(100% - 3px);
+      }
+  }
+</style>

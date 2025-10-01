@@ -1,0 +1,96 @@
+<div class="locations-container py-5">
+  <h2 class="display-5 fw-bold text-dark text-center">Our Gym Locations</h2> <br>
+
+  <div class="grid-layout">
+    <!-- Left: Gym Details -->
+    <div class="details-card" *ngIf="selectedGym; else selectPrompt">
+      <!-- Carousel as Background -->
+      <ng-container *ngIf="(selectedGym.photos?.length ?? 0) > 0; else detailsOnly">
+        <div class="carousel-wrapper">
+          <div id="gymCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div *ngFor="let photo of selectedGym.photos; let i = index" 
+                   class="carousel-item" 
+                   [class.active]="i === 0">
+                <div class="carousel-bg" [style.backgroundImage]="'url(' + photo + ')'">
+                  <div class="overlay"></div>
+                  <!-- Text over image -->
+                  <div class="details-content text-overlay">
+                    <div class="brand-label">{{ brandName }}</div>
+                    <h3 class="branch-name">
+                      <i class="bi bi-fire"></i> {{ selectedGym.branch }}
+                    </h3>
+                    <hr />
+                    <p>
+                      <i class="bi bi-geo-alt"></i> 
+                      <span>{{ selectedGym.address }}</span>
+                      <a *ngIf="selectedGym.mapUrl" [href]="selectedGym.mapUrl" target="_blank" rel="noopener" class="map-link">
+                        <i class="bi bi-map"></i> Map
+                      </a>
+                    </p>
+                    <p><i class="bi bi-telephone"></i> 
+                      <a href="tel:{{ selectedGym.contact }}" class="contact-link">{{ selectedGym.contact }}</a>
+                    </p>
+                    <p><i class="bi bi-clock"></i> Hours: {{ selectedGym.hours }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#gymCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#gymCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #detailsOnly>
+        <div class="carousel-bg no-photo-bg">
+          <div class="overlay"></div>
+          <div class="details-content text-overlay">
+            <div class="brand-label">{{ brandName }}</div>
+            <h3 class="branch-name">
+              <i class="bi bi-fire"></i> {{ selectedGym.branch }}
+            </h3>
+            <hr />
+            <p>
+              <i class="bi bi-geo-alt"></i> 
+              <span>{{ selectedGym.address }}</span>
+              <a *ngIf="selectedGym.mapUrl" [href]="selectedGym.mapUrl" target="_blank" rel="noopener" class="map-link">
+                <i class="bi bi-map"></i> Map
+              </a>
+            </p>
+            <p><i class="bi bi-telephone"></i> 
+              <a href="tel:{{ selectedGym.contact }}" class="contact-link">{{ selectedGym.contact }}</a>
+            </p>
+            <p><i class="bi bi-clock"></i> Hours: {{ selectedGym.hours }}</p>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+
+    <!-- Show this if no gym selected -->
+    <ng-template #selectPrompt>
+      <div class="select-placeholder">
+        <span>Select a gym to view details</span>
+      </div>
+    </ng-template>
+
+    <!-- Right: Gym Tiles -->
+    <div class="gyms-list">
+      <button
+        *ngFor="let gym of gyms"
+        class="gym-tile"
+        [class.active]="gym === selectedGym"
+        (click)="selectGym(gym)">
+        <div class="tile-brand">{{ brandName }}</div>
+        <div class="tile-branch">
+          <i class="bi bi-fire"></i> {{ gym.branch }}
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

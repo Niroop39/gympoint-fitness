@@ -1,0 +1,83 @@
+<div class="post-container">
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading-state">
+      <div class="pulse-loader"></div>
+      <p>Loading article...</p>
+    </div>
+  
+    <!-- Error State -->
+    <div *ngIf="!loading && error" class="error-state">
+      <div class="error-icon">⚠️</div>
+      <h2>Article Not Found</h2>
+      <p>We couldn't find the article you're looking for.</p>
+      <button class="back-button" [routerLink]="['/blogs']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
+        Back to Blog
+      </button>
+    </div>
+  
+    <!-- Post Content -->
+    <article class="post-content" *ngIf="!loading && !error && post">
+      <!-- Back Button -->
+      <div class="back-nav">
+        <button class="back-button" [routerLink]="['/blogs']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+          Back to Blog
+        </button>
+      </div>
+  
+      <header class="post-header">
+        <!-- Categories -->
+        <div class="post-categories">
+          <span *ngFor="let categoryId of post.categories" class="category-badge">
+            {{ getCategoryName(categoryId) }}
+          </span>
+        </div>
+        
+        <!-- Title -->
+        <h1 class="post-title" [innerHTML]="post.title.rendered"></h1>
+        
+        <!-- Meta Info -->
+        <div class="post-meta">
+          <span class="post-date">{{ formatDate(post.date) }}</span>
+          <span class="meta-separator">•</span>
+          <span class="reading-time">{{ getReadingTime(post.content.rendered) }}</span>
+        </div>
+      </header>
+  
+      <!-- Content -->
+      <div class="post-body" [innerHTML]="post.content.rendered"></div>
+  
+      <!-- Tags -->
+      <div class="post-tags" *ngIf="post.tags && post.tags.length > 0">
+        <h3>Tags</h3>
+        <div class="tags-list">
+          <span *ngFor="let tagId of post.tags" class="tag-badge">
+            #{{ getTagName(tagId) }}
+          </span>
+        </div>
+      </div>
+  
+      <!-- Related Posts -->
+      <section class="related-posts" *ngIf="relatedPosts && relatedPosts.length > 0">
+        <h3>Related Articles</h3>
+        <div class="related-posts-grid">
+          <div class="related-post-card" *ngFor="let relatedPost of relatedPosts">
+            <a [routerLink]="['/post', relatedPost.id]" class="related-post-link">
+              <div class="related-post-image" *ngIf="relatedPost.content.rendered.includes('<figure')">
+                <div [innerHTML]="relatedPost.content.rendered.substring(
+                  relatedPost.content.rendered.indexOf('<figure'), 
+                  relatedPost.content.rendered.indexOf('</figure>') + 9
+                )"></div>
+              </div>
+              <h4 class="related-post-title" [innerHTML]="relatedPost.title.rendered"></h4>
+            </a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>

@@ -1,0 +1,518 @@
+<div class="coaching-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-image-container">
+      <img src="corporate_wide.png" alt="Personal Coach" class="hero-image">
+      <div class="overlay"></div>
+    </div>
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="hero-content">
+            <h1 class="display-4 fw-bold text-white mb-3">Corporate Wellness Programs</h1>
+            <p class="lead text-white mb-4">Building healthier, happier, and more resilient teams through holistic wellness.</p>
+            <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg shadow">Book Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Introduction Section -->
+<section class="intro-section py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-4">Why Choose Our Corporate Wellness Program?</h2>
+        <p class="lead text-muted">
+          Built With Resilience (BWR) offers a holistic Corporate Wellness Program that integrates Fitness, Yoga, and Mental Health to support employee well-being and organizational performance.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- What We Offer Section with Glassmorphism -->
+  <section class="features-section py-5">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-12">
+          <h2 class="section-title text-white">What Our Coaching Includes</h2>
+          <div class="section-divider mx-auto">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="text-light mb-5">Comprehensive support to help you reach your goals</p>
+        </div>
+      </div>
+      
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-10">
+          <div class="accordion glassmorphism" id="coachingFeatures">
+            <!-- Feature 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <div class="feature-header">
+                    <i class="bi bi-person-check me-3"></i>
+                    <span>Customized Fitness Plans</span>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#coachingFeatures">
+                <div class="accordion-body">
+                  <p>On-demand workouts and fitness plans tailored for all levels to keep employees active and healthy.</p>
+                  <div class="feature-details">
+                    <div class="detail-item">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Custom workout design</span>
+                    </div>
+                    <div class="detail-item">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Goal-specific training</span>
+                    </div>
+                    <div class="detail-item">
+                      <i class="bi bi-check2-circle"></i>
+                      <span>Adaptation based on progress</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <div class="feature-header">
+                    <i class="bi bi-clipboard-check me-3"></i>
+                    <span>Guided Yoga Sessions</span>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#coachingFeatures">
+                <div class="accordion-body">
+                  <p>Improve flexibility, posture, and mindfulness with expert-led yoga sessions.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <div class="feature-header">
+                    <i class="bi bi-clipboard-data me-3"></i>
+                    <span>Mental Health Support</span>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#coachingFeatures">
+                <div class="accordion-body">
+                  <p>Meditation, stress management workshops, and expert-led sessions to enhance mental well-being.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <div class="feature-header">
+                    <i class="bi bi-trophy me-3"></i>
+                    <span>App-Based Tracking</span>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#coachingFeatures">
+                <div class="accordion-body">
+                  <p>Track progress, join live classes, and gain insights into wellness goals through our app.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Section (optional) -->
+  <app-testimonials></app-testimonials>
+  
+  <!-- CTA Section -->
+  <section class="cta-section py-5 bg-dark text-white text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="h2 mb-4">Transform Your Workplace Today</h2>
+          <p class="lead mb-4">Partner with BWR to create a healthier, happier, and more resilient workforce.</p>
+          <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">Book Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* General Styles */
+  .coaching-page {
+    color: #333;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .section-divider {
+    width: 100px;
+    height: 5px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .section-divider span {
+    display: block;
+    height: 5px;
+    background-color: #000;
+  }
+  
+  .section-divider span:nth-child(1),
+  .section-divider span:nth-child(3) {
+    width: 30px;
+  }
+  
+  .section-divider span:nth-child(2) {
+    width: 10px;
+  }
+  
+  /* Hero Section - Completely Redesigned */
+  .hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.4));
+    z-index: 0;
+  }
+  
+  .hero-content {
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+
+  
+  /* Features Section with Black Background and Glassmorphism */
+  .features-section {
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+  }
+  
+  .features-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(50, 50, 50, 0.3) 0%, rgba(0, 0, 0, 0.5) 70%);
+    z-index: 0;
+  }
+  
+  .features-section .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .features-section .section-title {
+    color: #fff;
+  }
+  
+  .features-section .section-divider span {
+    background-color: #fff;
+  }
+  
+  /* Glassmorphism Accordion */
+  .glassmorphism {
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .accordion-item {
+    border: none;
+    margin-bottom: 16px;
+    border-radius: 16px !important;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .accordion-item:hover {
+    box-shadow: 0 8px 40px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .accordion-button {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 20px;
+    box-shadow: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .accordion-button::after {
+    background-size: 1.1rem;
+    transition: all 0.3s ease;
+    filter: invert(1);
+  }
+  
+  .feature-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-header i {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .accordion-body {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .feature-details {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .detail-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .detail-item i {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Right for You Section */
+  .right-for-you-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .profile-card {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  
+  .profile-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  
+  .profile-icon i {
+    font-size: 1.8rem;
+  }
+  
+  .profile-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section {
+    padding: 80px 0;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  
+  .testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background-color: #212529;
+    position: relative;
+    padding: 80px 0;
+  }
+  
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .cta-section .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 991px) {
+    .hero-section {
+      height: 70vh;
+    }
+    
+    .hero-content {
+      padding: 20px;
+    }
+    
+    .features-section,
+    .right-for-you-section,
+    .testimonials-section,
+    .cta-section {
+      padding: 60px 0;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .hero-section {
+      height: 60vh;
+    }
+    
+    .hero-content {
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
+    
+    .profile-card {
+      margin-bottom: 20px;
+    }
+    
+    .features-section,
+    .right-for-you-section,
+    .testimonials-section,
+    .cta-section {
+      padding: 40px 0;
+    }
+    
+    .accordion-button {
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      height: 50vh;
+    }
+    
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .feature-details {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

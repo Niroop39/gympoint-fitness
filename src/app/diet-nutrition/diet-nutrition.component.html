@@ -1,0 +1,690 @@
+<div class="nutrition-page">
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+      <div class="hero-image-container">
+        <img src="diet_wide.jpeg" alt="Personal Coach" class="hero-image">
+        <div class="overlay"></div>
+      </div>      
+      <div class="container">
+        <div class="row align-items-center min-vh-40">
+          <div class="col-lg-7 position-relative z-index-1">
+            <h1 class="display-4 fw-bold mb-3">Nutrition Consulting</h1>
+            <p class="lead mb-4">Fuel Your Body, Transform Your Health</p>
+            <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg px-4 shadow-sm">Get Personalized Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Introduction Section -->
+    <section class="intro-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="intro-content">
+              <h2 class="section-title text-center mb-4">Why Nutrition Matters</h2>
+              <p class="lead">
+                At Build with Resilience, we know that nutrition is a fundamental part of any fitness journey. 
+                What you eat can significantly impact your performance, recovery, and overall health. 
+                That's why we offer tailored diet and nutrition plans designed to complement your fitness goals, 
+                enhance your well-being, and make healthy eating a sustainable lifestyle choice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Features Section with Glassmorphism -->
+    <section class="features-section py-5">
+      <div class="container">
+        <div class="row mb-5 text-center">
+          <div class="col-12">
+            <h2 class="section-title text-white">What Our Diet and Nutrition Plans Include</h2>
+            <div class="section-divider mx-auto">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <p class="text-light mb-5">Click on each item to learn more about our nutrition services</p>
+          </div>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-10">
+            <div class="accordion glassmorphism" id="nutritionFeatures">
+              <!-- Feature 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="feature-header">
+                      <i class="bi bi-clipboard-data me-3"></i>
+                      <span>Personalized Meal Plans</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#nutritionFeatures">
+                  <div class="accordion-body">
+                    <p>No two bodies are the same, and your diet should reflect your unique needs and preferences. 
+                    Our personalized meal plans are created based on your goals, dietary restrictions, lifestyle, 
+                    and food preferences. Whether you're looking to lose weight, build muscle, improve your energy levels, 
+                    or manage a specific health condition, we'll craft a plan that fits seamlessly into your life.</p>
+                    <div class="feature-details">
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Goal-specific nutrition</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Dietary restriction friendly</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Taste preference considered</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Lifestyle integrated</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Feature 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="feature-header">
+                      <i class="bi bi-book me-3"></i>
+                      <span>Nutritional Education and Guidance</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#nutritionFeatures">
+                  <div class="accordion-body">
+                    <p>Understanding what you eat and why is key to making lasting changes. We provide comprehensive 
+                    nutritional education and guidance, helping you understand the principles of balanced eating, 
+                    portion control, and nutrient timing. Our goal is to empower you with the knowledge to make informed 
+                    food choices that support your health and fitness goals.</p>
+                    <div class="feature-details">
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Nutrition fundamentals</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Portion control education</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Nutrient timing strategies</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Food label understanding</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Feature 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="feature-header">
+                      <i class="bi bi-people me-3"></i>
+                      <span>Ongoing Support and Adjustments</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#nutritionFeatures">
+                  <div class="accordion-body">
+                    <p>As your journey progresses, so do your nutritional needs. We regularly review your progress and 
+                    adjust your diet plan to ensure it continues to meet your needs and goals. You'll receive ongoing 
+                    support from our nutrition experts, who are always available to answer your questions, provide advice, 
+                    and keep you motivated.</p>
+                    <div class="feature-details">
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Regular progress reviews</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Plan adjustments</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Expert guidance</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Motivational support</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Feature 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <div class="feature-header">
+                      <i class="bi bi-journal-richtext me-3"></i>
+                      <span>Access to a Variety of Resources</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#nutritionFeatures">
+                  <div class="accordion-body">
+                    <p>In addition to your personalized meal plan, you'll have access to a wealth of resources, including 
+                    recipes, grocery lists, and meal prep guides. These resources are designed to make healthy eating 
+                    easy and enjoyable, providing you with the tools you need to stay on track and enjoy your journey 
+                    to better health.</p>
+                    <div class="feature-details">
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Healthy recipe library</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Shopping guides</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Meal prep tutorials</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Nutritional tools</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Feature 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <div class="feature-header">
+                      <i class="bi bi-arrow-repeat me-3"></i>
+                      <span>Flexible and Sustainable Approach</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#nutritionFeatures">
+                  <div class="accordion-body">
+                    <p>We believe in a balanced, flexible approach to nutrition that fits into your life without feeling 
+                    restrictive or overwhelming. Our plans are designed to help you develop healthy eating habits that 
+                    are sustainable in the long term, allowing you to enjoy your favorite foods in moderation while still 
+                    achieving your goals.</p>
+                    <div class="feature-details">
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Balance over restriction</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Sustainable habit building</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Treats in moderation</span>
+                      </div>
+                      <div class="detail-item">
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Long-term mindset</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Who Can Benefit Section -->
+    <section class="benefits-section py-5">
+      <div class="container">
+        <div class="row mb-5 text-center">
+          <div class="col-12">
+            <h2 class="section-title">Who Can Benefit from Our Diet and Nutrition Plans?</h2>
+            <div class="section-divider mx-auto" style="background-color:#000;">
+              <span style="background-color:#000;"></span>
+              <span style="background-color:#000;"></span>
+              <span style="background-color:#000;"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-3">
+            <div class="profile-card h-100">
+              <div class="icon-circle">
+                <i class="bi bi-person-plus"></i>
+              </div>
+              <h3 class="h5 my-3">Fitness Beginners</h3>
+              <p class="mb-0">Just starting your fitness journey and want to ensure your nutrition supports your new activity levels.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="profile-card h-100">
+              <div class="icon-circle">
+                <i class="bi bi-trophy"></i>
+              </div>
+              <h3 class="h5 my-3">Athletes & Competitors</h3>
+              <p class="mb-0">Looking to optimize performance and recovery through strategic nutrition planning.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="profile-card h-100">
+              <div class="icon-circle">
+                <i class="bi bi-heart"></i>
+              </div>
+              <h3 class="h5 my-3">Health-Focused Individuals</h3>
+              <p class="mb-0">Want to improve overall health metrics and manage specific health conditions through diet.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="profile-card h-100">
+              <div class="icon-circle">
+                <i class="bi bi-shuffle"></i>
+              </div>
+              <h3 class="h5 my-3">Those Seeking Change</h3>
+              <p class="mb-0">Ready to transform eating habits and develop a healthier relationship with food.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <app-testimonials></app-testimonials>
+    
+    <!-- CTA Section -->
+    <section id="consultation" class="cta-section py-5 bg-dark text-white text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="h2 mb-4">Get Started on Your Nutrition Journey Today!</h2>
+            <p class="lead mb-4">Are you ready to transform your health through better nutrition? Sign up for a free consultation to learn more about our diet and nutrition plans and how we can help you achieve your goals. Let's work together to build resilience through balanced, nutritious eating.</p>
+            <div class="cta-buttons">
+              <button [routerLink]="['/contact-us']" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">Book Free Consultation</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <style>
+    
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #000;
+    }
+    
+    .section-divider {
+      width: 100px;
+      height: 5px;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .section-divider span {
+      display: block;
+      height: 5px;
+      background-color: #fff;
+    }
+    
+    .section-divider span:nth-child(1),
+    .section-divider span:nth-child(3) {
+      width: 30px;
+    }
+    
+    .section-divider span:nth-child(2) {
+      width: 10px;
+    }
+    
+    .min-vh-40 {
+      min-height: 40vh;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0.4));
+    z-index: 0;
+  }
+    
+    /* Intro Section */
+    /* .intro-section {
+      padding: 60px 0;
+    }
+    
+    .intro-content {
+      padding: 30px;
+      background-color: #f9f9f9;
+    } */
+    
+    /* Features Section with Black Background and Glassmorphism */
+    .features-section {
+      background-color: #000;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0;
+    } 
+    
+    .features-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(50, 50, 50, 0.3) 0%, rgba(0, 0, 0, 0.5) 70%);
+      z-index: 0;
+    }
+    
+    .features-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .features-section .section-title {
+      color: #fff;
+    }
+    
+    /* Glassmorphism Accordion */
+    .glassmorphism {
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .accordion-item {
+      border: none;
+      margin-bottom: 16px;
+      border-radius: 16px !important;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .accordion-item:hover {
+      box-shadow: 0 8px 40px 0 rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    
+    .accordion-button {
+      background-color: transparent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 20px;
+      box-shadow: none !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .accordion-button:not(.collapsed) {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .accordion-button::after {
+      background-size: 1.1rem;
+      transition: all 0.3s ease;
+      filter: invert(1);
+    }
+    
+    .feature-header {
+      display: flex;
+      align-items: center;
+    }
+    
+    .feature-header i {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    
+    .accordion-body {
+      background-color: rgba(0, 0, 0, 0.3);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .feature-details {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    
+    .detail-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .detail-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .detail-item i {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 1.1rem;
+    }
+    
+    /* Benefits Section */
+    .benefits-section {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+    
+    .profile-card {
+      background-color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .icon-circle {
+      width: 70px;
+      height: 70px;
+      background-color: #000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    
+    .icon-circle i {
+      font-size: 1.8rem;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background-color: #212529;
+      position: relative;
+      padding: 80px 0;
+    }
+    
+    .cta-buttons .btn {
+      padding: 12px 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-buttons .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Media Queries */
+    @media (max-width: 991px) {
+      .hero-section {
+        height: 70vh;
+        padding: 80px 0;
+      }
+      
+      
+      .features-section {
+        padding: 80px 0;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .benefits-section {
+        padding: 50px 0;
+      }
+      
+      .cta-section {
+        padding: 60px 0;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .hero-section {
+        height: 60vh;
+        padding: 60px 0;
+        text-align: center;
+      }
+      
+      .hero-section .btn {
+        margin: 0 auto;
+        display: block;
+        max-width: 350px;
+      }
+      
+      
+      .features-section {
+        padding: 60px 0;
+      }
+      
+      .accordion-button {
+        padding: 15px;
+        font-size: 1rem;
+      }
+      
+      .feature-header i {
+        font-size: 1.2rem;
+      }
+      
+      .feature-details {
+        grid-template-columns: 1fr;
+      }
+      
+      .profile-card {
+        margin-bottom: 20px;
+      }
+      
+      .cta-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0 !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-section h1 {
+        font-size: 2.2rem;
+      }
+      
+      .features-section {
+        padding: 40px 0;
+      }
+      
+      .accordion-button {
+        font-size: 0.9rem;
+        padding: 12px;
+      }
+      
+      .feature-header i {
+        font-size: 1rem;
+        margin-right: 8px;
+      }
+      
+      .accordion-body {
+        font-size: 0.9rem;
+        padding: 15px;
+      }
+      
+      .detail-item {
+        padding: 8px 12px;
+      }
+      
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .icon-circle i {
+        font-size: 1.5rem;
+      }
+    }
+  </style>

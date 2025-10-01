@@ -1,0 +1,453 @@
+<div class="about-us-page">
+  <section class="page-hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-7 col-md-10">
+          <div class="hero-content">
+            <h1 class="page-title">Built With Resilience</h1>
+            <h3 class="lead mb-4">Strength. Discipline. Transformation</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="founders" class="founders-section py-5">
+    <div class="container">
+      <h2 class="display-5 fw-bold text-center text-dark">Meet our Core Team</h2>
+      <div class="text-center mx-auto" style="max-width: 600px;">
+        <p class="text-muted mb-5">
+          Our team brings expertise in fitness, wellness, and transformation, empowering individuals to achieve strength and resilience.
+        </p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">
+        <div class="col-12 mb-4 founder-first">
+          <div class="card founder-card text-center text-md-start flex-md-row align-items-center">
+            <div class="founder-image me-md-4">
+              <img src="pavan_founder.jpg" alt="Founder" class="card-img-top grayscale">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center align-items-md-start">
+              <h5 class="card-title">Pavan Teyari</h5>
+              <p class="card-text">Founder & Master Coach</p>
+              <p class="card-text">Pavan Teyari, American Council on Exercise (ACE )Certified Coach and Founder of Built With Resilience, is a highly respected Master Coach with over 18 years of experience in personal training. He is known for his specialization in injury management and complex body transformations, having successfully guided over 3,000 clients to their goals & currently manages a team of 50+ trainers</p>
+              <a href="https://www.instagram.com/pavanteyari/" target="_blank" class="social-icon">
+                <i class="bi bi-instagram"></i>
+                <span class="social-text">Follow on Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card founder-card text-center">
+            <div class="founder-image">
+              <img src="Trainer3.jpeg" alt="Co-Founder 2" class="card-img-top grayscale">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sai Nithin</h5>
+              <p class="card-text">Co-Founder & Coach</p>
+              <p class="card-text">Sai Nithin Bashetty is a fitness coach and entrepreneur known for his passion for movement, strength training, and mindful living, inspiring others through his fitness journey. With years of experience in coaching, he has helped numerous clients achieve their fitness goals through personalized training programs.</p>
+              <a href="https://www.instagram.com/sainithin.999/" target="_blank" class="social-icon">
+                <i class="bi bi-instagram"></i>
+                <span class="social-text">Follow on Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card founder-card text-center">
+            <div class="founder-image">
+              <img src="Trainer1.jpeg" alt="Co-Founder 3" class="card-img-top grayscale">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Anand Inumpudi</h5>
+              <p class="card-text">Co-Founder & Coach</p>
+              <p class="card-text"> Anand, a certified fitness professional with a Diploma in Fitness & Nutrition and RYT-200, specializes in resistance training and holistic health. A seasoned endurance athlete and triathlete, he has guided 1,000+ clients across India, the US, and Canada. His personalized approach integrates strength training, nutrition, and overall well-being.</p>
+              <a href="https://www.instagram.com/builtwithcoachanand/" target="_blank" class="social-icon">
+                <i class="bi bi-instagram"></i>
+                <span class="social-text">Follow on Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card founder-card text-center">
+            <div class="founder-image">
+              <img src="Trainer5.png" alt="Co-Founder 1" class="card-img-top grayscale">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Santhosh Menthula</h5>
+              <p class="card-text">Co-Founder & Coach</p>
+              <p class="card-text">Santhosh Menthula, Co-Founder of Built With Resilience, leverages over a decade of expertise in Sales and Marketing to drive the brand’s mission of holistic transformation. His strategic vision and client-focused approach have been instrumental in delivering impactful results and fostering growth across diverse domains.</p>
+              <a href="https://www.instagram.com/santhosh_menthula/" target="_blank" class="social-icon">
+                <i class="bi bi-instagram"></i>
+                <span class="social-text">Follow on Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-choose-us></app-choose-us>
+<app-trainers></app-trainers>
+<app-testimonials></app-testimonials>
+
+<section id="purchase" class="cta-section py-5 bg-dark text-white text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="h2 mb-4">Get Started Now</h2>
+        <p class="lead mb-4">Don't wait to transform your fitness. Our pre-written fitness programs are an easy, affordable way to get started on your goals, whether you're aiming to lose weight, build muscle, or improve endurance.</p>
+        <div class="cta-buttons">
+          <button  [routerLink]="['/contact-us']" class="btn btn-light btn-lg mb-3 mb-md-0 me-md-3">Book Free Consultation</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.about-us-page {
+    color: #333;
+  }
+
+  /* Add grayscale effect to images */
+  .grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .founder-card:hover .grayscale {
+    filter: grayscale(70%);
+  }
+
+  /* Updated Hero Section */
+  .page-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background: url('about_wide.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+  }
+
+  .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  .page-title span {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Founders Section */
+  .founders-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+  }
+
+  .founder-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .founder-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15); /* Slightly more pronounced shadow on hover */
+  }
+
+  .founder-image {
+    height: auto; /* Let the height adjust based on content */
+    overflow: hidden;
+  }
+
+  .founder-image img {
+    width: 100%;
+    height: auto; /* Let the height adjust based on aspect ratio */
+    object-fit: contain; /* Ensures the entire image is visible within the container */
+    transition: transform 0.3s ease-in-out; /* Smoother image hover */
+  }
+
+  .founder-card:hover .founder-image img {
+    transform: scale(1.02); /* Slight zoom on image hover */
+  }
+
+  .founder-card .card-body {
+    padding: 20px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .founder-card .card-title {
+    font-size: 1.3rem; /* Slightly smaller title */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000000;
+  }
+
+  .founder-card .card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Adjust width to fit content */
+    height: 30px;
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333;
+    border-radius: 50px; /* More rounded for text */
+    font-size: 1rem; /* Adjusted icon font size */
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    padding: 0 15px; /* Add padding for text */
+  }
+
+  .social-icon i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+
+  .social-text {
+    font-size: 0.9rem; /* Adjust text size */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .social-icon:hover {
+    background-color: #0d6efd; /* Bootstrap primary color */
+    color: #fff;
+  }
+
+  /* First Founder Card Styling */
+  .founder-first {
+    width: 100%; /* Make the first column take full width */
+  }
+
+  .founder-first .card {
+    flex-direction: row; /* Image and content in a row */
+    text-align: left; /* Align text to the left */
+    align-items: stretch; /* Make card body take full height */
+  }
+
+  .founder-first .founder-image {
+    flex: 0 0 auto; /* Don't grow, take natural width */
+    max-width: 400px; /* Increased max width for larger image */
+    height: auto; /* Adjust height based on image aspect ratio */
+    margin-right: 1.5rem; /* Space between image and text */
+  }
+
+  .founder-first .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: flex-start; /* Align content to the start (left) */
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .page-hero {
+      height: 60vh;
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-content {
+      padding: 30px;
+    }
+
+    .founders-section {
+      padding: 60px 0;
+    }
+
+    .founder-first .card {
+      flex-direction: column; /* Stack image and text on smaller screens */
+      text-align: center; /* Center text */
+      align-items: center; /* Center items */
+    }
+
+    .founder-first .founder-image {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
+    .founder-first .card-body {
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .page-hero {
+      height: 50vh;
+      min-height: 400px;
+    }
+
+    .hero-content {
+      padding: 25px;
+      margin: 0 15px;
+      border-left: none;
+      text-align: center;
+    }
+
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+    }
+
+    .founders-section {
+      padding: 40px 0;
+    }
+
+    .founder-card {
+      margin-bottom: 30px;
+    }
+
+    .founder-card .card-body {
+      padding: 15px;
+    }
+
+    .founder-card .card-title {
+      font-size: 1.2rem;
+    }
+
+    .founder-card .card-text {
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .social-icon {
+      width: auto;
+      height: 28px;
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+      padding: 0 10px;
+    }
+
+    .social-icon i {
+      margin-right: 5px;
+    }
+
+    .social-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-hero {
+      height: 60vh;
+    }
+
+    .hero-content {
+      padding: 20px;
+    }
+
+    .page-title {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .lead {
+      font-size: 1rem;
+    }
+
+    .founder-card .card-title {
+      font-size: 1.1rem;
+    }
+
+    .founder-card .card-text {
+      font-size: 0.8rem;
+    }
+
+    .social-icon {
+      height: 26px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      padding: 0 8px;
+    }
+
+    .social-text {
+      font-size: 0.7rem;
+    }
+  }
+
+  /* Styles for 2 cards in a row */
+  @media (min-width: 768px) {
+    .founders-section .row {
+      --bs-gutter-x: 30px; /* Adjust gutter width as needed */
+      justify-content: center; /* Center the row cards horizontally */
+      display: flex; /* Enable flexbox for the row */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+    }
+    .founders-section .col-md-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    .founders-section .col-lg-4 {
+      width: calc(33.333333% - var(--bs-gutter-x) / 2); /* Adjust width for gutter */
+    }
+
+    /* Ensure the first card takes full width on medium screens and above */
+    .founder-first {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .founders-section .row {
+      justify-content: center; /* Center the row cards horizontally */
+      display: flex; /* Enable flexbox for the row */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+    }
+    .founders-section .col-lg-4 {
+      width: calc(33.333333% - var(--bs-gutter-x) / 2); /* Adjust width for gutter */
+    }
+    /* Ensure the first card takes full width on larger screens */
+    .founder-first {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+</style>

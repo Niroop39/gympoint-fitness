@@ -1,0 +1,278 @@
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+.locations-container {
+  background: #fff;
+  color: #111;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+
+.details-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  border: 1px solid #eee;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* Carousel as Background */
+.carousel-wrapper {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-bg {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/* Hide carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+  z-index: 1;
+}
+
+.text-overlay {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 1.2rem;
+  max-width: 75%;
+}
+
+.text-overlay .brand-label {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ddd;
+}
+
+.text-overlay .branch-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.text-overlay hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 0.8rem 0;
+}
+
+.text-overlay p {
+  margin-bottom: 0.6rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.text-overlay i {
+  margin-right: 0.4rem;
+  color: #fff;
+}
+
+.text-overlay .map-link {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.2rem 0.45rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.text-overlay .map-link:hover {
+  background: #fff;
+  color: #000 !important;
+}
+
+.text-overlay .contact-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Right Column: Gym Tiles */
+.gyms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gym-tile {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: left;
+  color: #111;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.gym-tile:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+}
+.gym-tile.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.tile-brand {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.tile-branch {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+/* Placeholder */
+.select-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  border: 1px dashed #ccc;
+  min-height: 300px;
+  color: #888;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .text-overlay {
+    max-width: 85%;
+    padding: 1rem;
+  }
+
+  .text-overlay .branch-name {
+    font-size: 1.3rem;
+  }
+
+  .text-overlay p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .details-card {
+    height: auto;
+  }
+
+  .carousel-wrapper {
+    height: 280px; /* fixed height on tablets/mobiles */
+  }
+
+  .text-overlay {
+    max-width: 95%;
+    padding: 0.8rem;
+  }
+
+  .text-overlay .branch-name {
+    font-size: 1.2rem;
+  }
+
+  .text-overlay p {
+    font-size: 0.8rem;
+  }
+
+  .gyms-list {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
+
+  .gym-tile {
+    min-width: 130px;
+    flex: 0 0 auto;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper {
+    height: 230px;
+  }
+
+  .text-overlay .branch-name {
+    font-size: 1rem;
+  }
+
+  .text-overlay p {
+    font-size: 0.75rem;
+  }
+
+  .gym-tile {
+    min-width: 110px;
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
+}

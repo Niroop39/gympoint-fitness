@@ -1,0 +1,109 @@
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-carousel {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 1;
+}
+
+.hero-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%);
+  z-index: 2;
+}
+
+.hero-content-container {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 3;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content-container h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.hero-content-container p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+
+.btn-lg {
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-content-box {
+  background: rgba(0,0,0,0.92);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+  color: #fff;
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .hero, .hero-carousel, .hero-img, .hero-content-container, .hero-overlay {
+    min-height: 60vh;
+    height: 60vh;
+    width: 100vw;
+  }
+  .hero-content-container {
+    padding: 1rem;
+  }
+  .hero-content-container h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content-container p {
+    font-size: 1rem;
+  }
+  .hero-content-box {
+    padding: 1.2rem 0.7rem;
+    border-radius: 1rem;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    margin: 10px auto;
+  }
+}
