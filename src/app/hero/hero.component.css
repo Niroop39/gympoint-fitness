@@ -56,6 +56,7 @@
 }
 
 .btn-lg {
+  background-color: #FFCD32;
   font-size: 1.1rem;
   font-weight: 700;
   border-radius: 0.5rem;
@@ -63,7 +64,11 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+.btn-lg:hover {
+  background-color: #e6b72c;
+  color: #000;
+  text-decoration: none;
+}
 .hero-content-box {
   background: rgba(0,0,0,0.92);
   border-radius: 1.5rem;

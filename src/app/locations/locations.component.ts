@@ -29,8 +29,7 @@ export class LocationsComponent {
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
-        'carousel1.jpg',
-        'carousel2.jpg'
+        'carousel1.webp'
       ],
       mapUrl: 'https://goo.gl/maps/abc123madhapur'
     },
@@ -40,6 +39,7 @@ export class LocationsComponent {
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
+        'carousel2.webp'
       ],
       mapUrl: 'https://goo.gl/maps/abc123karmanghat'
     },
@@ -49,6 +49,7 @@ export class LocationsComponent {
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
+        'carousel3.webp'
       ],
       mapUrl: 'https://goo.gl/maps/abc123tellapur'
     },
@@ -58,6 +59,7 @@ export class LocationsComponent {
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
+        'carousel4.webp'
       ],
       mapUrl: 'https://goo.gl/maps/abc123uppal'
     },
@@ -67,6 +69,7 @@ export class LocationsComponent {
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
+        'carousel1.webp'
       ],
       mapUrl: 'https://goo.gl/maps/abc123malakpet'
     },
@@ -76,6 +79,7 @@ export class LocationsComponent {
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
+        'carousel2.webp'
       ],
       mapUrl: 'https://goo.gl/maps/abc123chandanagar'
     }

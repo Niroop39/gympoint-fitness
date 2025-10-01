@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { WordpressService } from '../wordpress.service';
+import { LocationsComponent } from "../locations/locations.component";
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, LocationsComponent],
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss'] // or .css depending on your setup
 })
