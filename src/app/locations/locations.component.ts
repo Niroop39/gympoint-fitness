@@ -25,7 +25,7 @@ export class LocationsComponent {
   gyms: Gym[] = [
     {
       branch: 'Madhapur-Hitech',
-      address: 'Plot 12, Hitech City Rd, Madhapur, Hyderabad',
+      address: 'Behind Meridian School, Siddhi Vinayak Nagar Madhapur, HITEC City, Hyderabad, Telangana 500081',
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
@@ -35,7 +35,7 @@ export class LocationsComponent {
     },
     {
       branch: 'Karmanghat',
-      address: 'Plot 22, Karmanghat Main Rd, Hyderabad',
+      address: '8-4-23, Karmanghat Rd, opp. Green Park Colony Main Road, opp. UNLIMITED, Pavanpuri Colony, KAMAN, Hyderabad, Telangana 500074',
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
@@ -45,7 +45,7 @@ export class LocationsComponent {
     },
     {
       branch: 'Tellapur',
-      address: 'Plot 33, Tellapur Main Rd, Hyderabad',
+      address: '4th and 5th Floor, Tellapur Rd, opposite MUPPA\'S GREEN GRANDEUR, Gopanapalli Thanda, Hyderabad, Telangana 500046',
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
@@ -55,33 +55,13 @@ export class LocationsComponent {
     },
     {
       branch: 'Uppal',
-      address: 'Plot 44, Uppal Main Rd, Hyderabad',
+      address: '01, Plot No. A, 1/5, Survey no, IDA Uppal, Uppal, Hyderabad, Telangana 500039',
       contact: '+91 8008884655',
       hours: '6am - 10pm',
       photos: [
         'carousel4.webp'
       ],
       mapUrl: 'https://goo.gl/maps/abc123uppal'
-    },
-    {
-      branch: 'Malakpet',
-      address: 'Plot 55, Malakpet Main Rd, Hyderabad',
-      contact: '+91 8008884655',
-      hours: '6am - 10pm',
-      photos: [
-        'carousel1.webp'
-      ],
-      mapUrl: 'https://goo.gl/maps/abc123malakpet'
-    },
-    {
-      branch: 'Chandanagar',
-      address: 'Plot 66, Chandanagar Main Rd, Hyderabad',
-      contact: '+91 8008884655',
-      hours: '6am - 10pm',
-      photos: [
-        'carousel2.webp'
-      ],
-      mapUrl: 'https://goo.gl/maps/abc123chandanagar'
     }
   ];
 

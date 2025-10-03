@@ -1,3 +1,82 @@
 body, p, h1, h2, h3, h4, h5, h6, span, div {
     font-family: "Rubik", sans-serif;
   }
+
+.about-section {
+  padding: 60px 0;
+}
+
+.about-images {
+  text-align: center;
+}
+
+.image-container {
+  max-width: 400px; /* keeps image neat */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.image-container img {
+  transition: transform 0.5s ease;
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
+.image-container:hover img {
+  transform: scale(1.03);
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.achievement-box {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.achievement-text {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.btn-explore {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid #000;
+}
+
+.btn-explore:hover {
+  background-color: white;
+  color: #000;
+  border: 2px solid #000;
+}

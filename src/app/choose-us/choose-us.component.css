@@ -126,4 +126,8 @@
     height: 28vh;
     max-height: 28vh;
   }
+
+  .carousel-control {
+    font-size: 25px;
+  }
 }

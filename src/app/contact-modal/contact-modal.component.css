@@ -1,0 +1,88 @@
+/* Glass style for modal content */
+.glassmorphism {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  max-width: 500px;       /* Desktop default */
+  margin: auto;
+  overflow-y: auto;
+  max-height: 90vh;
+  padding: 2rem;
+}
+
+/* Inputs and buttons */
+.glass-input,
+.glass-group,
+.glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+.custom-backdrop {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.modal-content {
+    background-color: none !important;
+}
+/* Desktop adjustments */
+@media (min-width: 577px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0;
+    height: 100%;
+  }
+
+  .modal-content {
+    border-radius: 0;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .modal-body {
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+
+  .glass-input,
+  .glass-button {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

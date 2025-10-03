@@ -15,6 +15,8 @@ import { filter } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ScrollTopComponent } from "./scroll-top/scroll-top.component";
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ContactModalComponent } from './contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -31,10 +33,29 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private loadingService: LoadingService,
+    private modalService: NgbModal,
     @Inject(PLATFORM_ID) private platformId: Object
   ) { }
 
   ngOnInit() {
+     setTimeout(() => {
+      this.openContactModal();
+    }, 5000); // 5000ms = 5 seconds
+  }
+
+  openContactModal() {
+    const modalRef = this.modalService.open(ContactModalComponent, {
+      centered: true,
+      backdrop: 'static', // user must click close button to dismiss
+      backdropClass: 'custom-backdrop', // custom backdrop
+      size: 'md',
+    });
+
+    // Optional: handle modal close
+    modalRef.result.then(
+      (result) => console.log('Modal closed:', result),
+      (reason) => console.log('Modal dismissed')
+    );
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         this.loadingService.show();

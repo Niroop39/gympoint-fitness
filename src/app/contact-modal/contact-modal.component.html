@@ -1,0 +1,73 @@
+<div class="modal-content glassmorphism p-4">
+  <div class="modal-header border-0 pb-0">
+    <h4 class="modal-title text-center w-100 text-white">Get in Touch</h4>
+    <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="activeModal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Full Name -->
+      <div class="mb-3">
+        <label class="form-label text-white">Full Name</label>
+        <input type="text" class="form-control glass-input" formControlName="first_name" placeholder="Your Name">
+      </div>
+
+      <!-- Age & Location -->
+      <div class="row mb-3">
+        <div class="col-6">
+          <label class="form-label text-white">Age</label>
+          <input type="number" class="form-control glass-input" formControlName="age" placeholder="Age">
+        </div>
+        <div class="col-6">
+          <label class="form-label text-white">Location</label>
+          <input type="text" class="form-control glass-input" formControlName="location" placeholder="Location">
+        </div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="mb-3">
+        <label class="form-label text-white">Mobile Number</label>
+        <div class="input-group glass-group">
+          <input type="text" class="form-control glass-input" formControlName="country_code" style="max-width: 80px;">
+          <input type="tel" class="form-control glass-input" formControlName="tel_660" placeholder="9876543210">
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label text-white">Email</label>
+        <input type="email" class="form-control glass-input" formControlName="your_email" placeholder="you@example.com">
+      </div>
+
+      <!-- Program -->
+      <div class="mb-3">
+        <label class="form-label text-white">Program</label>
+        <select class="form-select glass-input" formControlName="your_subject">
+          <option value="" disabled selected>Select a program</option>
+          <option value="Online Coaching">Online Coaching</option>
+          <option value="1-1 Offline Coaching">1-1 Offline Coaching</option>
+          <option value="Nutrition Consulting">Nutrition Consulting</option>
+          <option value="Corporate Wellness Program">Corporate Wellness Program</option>
+          <option value="App Based Program">App Based Program</option>
+        </select>
+      </div>
+
+      <!-- Goals -->
+      <div class="mb-3">
+        <label class="form-label text-white">Main Goals</label>
+        <select class="form-select glass-input" formControlName="your_message">
+          <option value="" disabled selected>Select your main goal</option>
+          <option value="lose_weight">Lose Weight</option>
+          <option value="build_muscle">Build Muscle</option>
+          <option value="tone_up">Tone Up</option>
+          <option value="gain_confidence">Gain Confidence</option>
+        </select>
+      </div>
+
+      <div class="text-center mt-3">
+        <button type="submit" class="btn btn-outline-light glass-button w-100" [disabled]="contactForm.invalid || isSubmitting">
+          {{ isSubmitting ? 'Submitting...' : 'Submit' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

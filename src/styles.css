@@ -4,6 +4,10 @@ body {
     font-family: "Rubik", sans-serif;
 }
 
+.modal-content {
+    background-color: transparent !important;
+}
+
 .blog-image-wrapper figure img {
     max-width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
