@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.builtwithresilience.com/sitemap.xml
+Sitemap: https://www.gympointfitness.com/sitemap.xml

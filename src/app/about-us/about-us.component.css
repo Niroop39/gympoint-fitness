@@ -1,3 +1,114 @@
 * {
     font-family: "Rubik", sans-serif;
 }
+
+/* === Global Section Spacing === */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  scroll-margin-top: 70px; /* for navbar offset */
+}
+
+/* === Hero Section === */
+.bg-dark {
+  background-color: #111 !important;
+}
+
+section.bg-dark h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+section.bg-dark p.lead {
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.text-warning {
+  color: #f7c948 !important;
+}
+
+/* === Who We Are Section === */
+section .text-muted {
+  color: #555 !important;
+  line-height: 1.7;
+}
+
+section img {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+section h2 {
+  color: #222;
+}
+
+/* === Mission & Vision === */
+section.bg-dark.text-white {
+  background-color: #181818 !important;
+}
+
+.bg-secondary {
+  background-color: #242424 !important;
+  color: #f8f9fa !important;
+}
+
+.bg-secondary p {
+  color: #ccc !important;
+  line-height: 1.6;
+}
+
+.bg-secondary h4 {
+  color: #f7c948 !important;
+}
+
+/* === Trainers & Choose Us Section Wrappers === */
+app-trainers,
+app-choose-us {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+/* === Headings between sections === */
+h2.text-center {
+  color: #111;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 992px) {
+  section.bg-dark h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  section.bg-dark h1 {
+    font-size: 1.8rem;
+  }
+
+  section.bg-dark p.lead {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  h2.text-center {
+    font-size: 1.6rem;
+  }
+
+  section img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -11,7 +11,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
-    // { path: 'about-us', component: AboutUsComponent},
+    { path: 'about-us', component: AboutUsComponent},
     { path: 'programs/1-1-offline-coaching', component: OneOneCoachComponent},
     { path: 'programs/online-coaching', component: PersonalTrainingComponent},
     { path: 'programs/corporate-wellness-programs', component: OnlineProgramsComponent},

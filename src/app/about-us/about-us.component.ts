@@ -7,7 +7,7 @@ import { ChooseUsComponent } from '../choose-us/choose-us.component';
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [TrainersComponent, RouterModule, TestimonialsComponent, ChooseUsComponent],
+  imports: [TrainersComponent, RouterModule, ChooseUsComponent],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })
